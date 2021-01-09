@@ -1,0 +1,12 @@
+[all]
+master
+web
+data
+
+[db]
+data
+
+[app]
+web
+master
+

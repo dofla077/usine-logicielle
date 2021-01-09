@@ -1,0 +1,16 @@
+- hosts: db
+  remote_user: root
+
+  environment:
+    LANG: C
+    LC_MESSAGES: C
+    LC_ALL: C
+
+  tasks:
+    - name: Install vim
+      apt: name=vim state=present
+
+    - name: Install tmux
+      apt: >
+        name=tmux
+        state=present

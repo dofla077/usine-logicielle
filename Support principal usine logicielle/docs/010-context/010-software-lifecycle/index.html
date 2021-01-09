@@ -1,0 +1,1596 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Glenn Y. Rolland">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>Cycles de vie des projets - Usine Logicielle</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="black">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cycles-de-vie-des-projets" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Usine Logicielle" class="md-header-nav__button md-logo" aria-label="Usine Logicielle">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Usine Logicielle
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Cycles de vie des projets
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://bitbucket.com/glenux-corp/teaching-boilerplate" title="Aller au dépôt" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Usine Logicielle" class="md-nav__button md-logo" aria-label="Usine Logicielle">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Usine Logicielle
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://bitbucket.com/glenux-corp/teaching-boilerplate" title="Aller au dépôt" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Contexte
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contexte" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Contexte
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cycles de vie des projets
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Cycles de vie des projets" class="md-nav__link md-nav__link--active">
+      Cycles de vie des projets
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+    <nav class="md-nav" aria-label="Rappels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-projet" class="md-nav__link">
+    Gestion de projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phases-dun-projet" class="md-nav__link">
+    Phases d'un projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-i-analyse-et-specification" class="md-nav__link">
+    Phase I : Analyse et spécification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-ii-conception" class="md-nav__link">
+    Phase II : Conception
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-iii-realisation" class="md-nav__link">
+    Phase III : Réalisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-iv-tests" class="md-nav__link">
+    Phase IV : Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-v-mise-en-production" class="md-nav__link">
+    Phase V : Mise en production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-vi-maintenance-et-adaptation" class="md-nav__link">
+    Phase VI : Maintenance et adaptation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effort-aux-differentes-phases" class="md-nav__link">
+    Effort aux différentes phases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-peu-dhumour" class="md-nav__link">
+    Un peu d'humour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differents-modeles-de-projets" class="md-nav__link">
+    Différents modèles de projets
+  </a>
+  
+    <nav class="md-nav" aria-label="Différents modèles de projets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selon-la-facon-davancer-sur-le-projet" class="md-nav__link">
+    Selon la façon d'avancer sur le projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-origines" class="md-nav__link">
+    Modèle en cascade : Origines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-caracteristiques" class="md-nav__link">
+    Modèle en cascade : Caractéristiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-illustration" class="md-nav__link">
+    Modèle en cascade : Illustration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differents-modeles-de-projets_1" class="md-nav__link">
+    Différents modèles de projets
+  </a>
+  
+    <nav class="md-nav" aria-label="Différents modèles de projets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cycle-en-v" class="md-nav__link">
+    Cycle en V
+  </a>
+  
+    <nav class="md-nav" aria-label="Cycle en V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#illustration" class="md-nav__link">
+    Illustration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototypage" class="md-nav__link">
+    Prototypage
+  </a>
+  
+    <nav class="md-nav" aria-label="Prototypage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine_1" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#illustration_1" class="md-nav__link">
+    Illustration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spirale" class="md-nav__link">
+    Spirale
+  </a>
+  
+    <nav class="md-nav" aria-label="Spirale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine_2" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages_1" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients_1" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodes-iteratives-agile-xp-etc" class="md-nav__link">
+    Méthodes itératives (agile, XP, etc.)
+  </a>
+  
+    <nav class="md-nav" aria-label="Méthodes itératives (agile, XP, etc.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valeurs" class="md-nav__link">
+    Valeurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    Fonctionnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages_2" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients_2" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variantes" class="md-nav__link">
+    Variantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lotissement" class="md-nav__link">
+    Lotissement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-necessite-dune-methode-de-gestion" class="md-nav__link">
+    La nécessité d'une méthode de gestion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapes-paralleles-externes-au-projet" class="md-nav__link">
+    Étapes parallèles / externes au projet
+  </a>
+  
+    <nav class="md-nav" aria-label="Étapes parallèles / externes au projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-transverse" class="md-nav__link">
+    Le transverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-formation" class="md-nav__link">
+    La formation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../020-context-and-needs/" title="Contexte de l'exploitation" class="md-nav__link">
+      Contexte de l'exploitation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../030-culture/" title="Contexte culturel et technique" class="md-nav__link">
+      Contexte culturel et technique
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../040-ci-and-devops/" title="Integration continue et DevOps" class="md-nav__link">
+      Integration continue et DevOps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Concept & enjeux
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concept & enjeux" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Concept & enjeux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../020-concept-and-stakes/010-definition/" title="Définition" class="md-nav__link">
+      Définition
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../020-concept-and-stakes/020-components/" title="Architecture et composants" class="md-nav__link">
+      Architecture et composants
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../020-concept-and-stakes/030-full-integrated/" title="Des plates-formes integrées" class="md-nav__link">
+      Des plates-formes integrées
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../020-concept-and-stakes/090-comparison/" title="Outils collaboratifs de gestion de projet" class="md-nav__link">
+      Outils collaboratifs de gestion de projet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Mise en oeuvre
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Mise en oeuvre" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Mise en oeuvre
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../040-mise-en-oeuvre/010-docker/" title="Utilisation de docker" class="md-nav__link">
+      Utilisation de docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../040-mise-en-oeuvre/020-components/" title="Composant par composant" class="md-nav__link">
+      Composant par composant
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../040-mise-en-oeuvre/030-integrated/" title="Outils integrés" class="md-nav__link">
+      Outils integrés
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Gestion de projet
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Gestion de projet" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Gestion de projet
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../_050-management/010-use-cases-study.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../_050-management/020-platform.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../_050-management/090-bonnes-pratiques.md" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+    <nav class="md-nav" aria-label="Rappels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-projet" class="md-nav__link">
+    Gestion de projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phases-dun-projet" class="md-nav__link">
+    Phases d'un projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-i-analyse-et-specification" class="md-nav__link">
+    Phase I : Analyse et spécification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-ii-conception" class="md-nav__link">
+    Phase II : Conception
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-iii-realisation" class="md-nav__link">
+    Phase III : Réalisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-iv-tests" class="md-nav__link">
+    Phase IV : Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-v-mise-en-production" class="md-nav__link">
+    Phase V : Mise en production
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-vi-maintenance-et-adaptation" class="md-nav__link">
+    Phase VI : Maintenance et adaptation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effort-aux-differentes-phases" class="md-nav__link">
+    Effort aux différentes phases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-peu-dhumour" class="md-nav__link">
+    Un peu d'humour
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differents-modeles-de-projets" class="md-nav__link">
+    Différents modèles de projets
+  </a>
+  
+    <nav class="md-nav" aria-label="Différents modèles de projets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selon-la-facon-davancer-sur-le-projet" class="md-nav__link">
+    Selon la façon d'avancer sur le projet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-origines" class="md-nav__link">
+    Modèle en cascade : Origines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-caracteristiques" class="md-nav__link">
+    Modèle en cascade : Caractéristiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modele-en-cascade-illustration" class="md-nav__link">
+    Modèle en cascade : Illustration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differents-modeles-de-projets_1" class="md-nav__link">
+    Différents modèles de projets
+  </a>
+  
+    <nav class="md-nav" aria-label="Différents modèles de projets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cycle-en-v" class="md-nav__link">
+    Cycle en V
+  </a>
+  
+    <nav class="md-nav" aria-label="Cycle en V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#illustration" class="md-nav__link">
+    Illustration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototypage" class="md-nav__link">
+    Prototypage
+  </a>
+  
+    <nav class="md-nav" aria-label="Prototypage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine_1" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#illustration_1" class="md-nav__link">
+    Illustration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spirale" class="md-nav__link">
+    Spirale
+  </a>
+  
+    <nav class="md-nav" aria-label="Spirale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origine_2" class="md-nav__link">
+    Origine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages_1" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients_1" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodes-iteratives-agile-xp-etc" class="md-nav__link">
+    Méthodes itératives (agile, XP, etc.)
+  </a>
+  
+    <nav class="md-nav" aria-label="Méthodes itératives (agile, XP, etc.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valeurs" class="md-nav__link">
+    Valeurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement" class="md-nav__link">
+    Fonctionnement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantages_2" class="md-nav__link">
+    Avantages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenients_2" class="md-nav__link">
+    Inconvénients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variantes" class="md-nav__link">
+    Variantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lotissement" class="md-nav__link">
+    Lotissement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-necessite-dune-methode-de-gestion" class="md-nav__link">
+    La nécessité d'une méthode de gestion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapes-paralleles-externes-au-projet" class="md-nav__link">
+    Étapes parallèles / externes au projet
+  </a>
+  
+    <nav class="md-nav" aria-label="Étapes parallèles / externes au projet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-transverse" class="md-nav__link">
+    Le transverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-formation" class="md-nav__link">
+    La formation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="cycles-de-vie-des-projets">Cycles de vie des projets<a class="headerlink" href="#cycles-de-vie-des-projets" title="Permanent link">#</a></h1>
+<h2 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">#</a></h2>
+<h3 id="gestion-de-projet">Gestion de projet<a class="headerlink" href="#gestion-de-projet" title="Permanent link">#</a></h3>
+<ul>
+<li>La gestion de projet vise à maîtriser :<ul>
+<li>Les risques</li>
+<li>Les délais, les coûts</li>
+<li>La qualité</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Qu'est-ce qu'un cycle de vie ?<ul>
+<li>Découpage en un ensemble de processus</li>
+<li>Un processus : objectif, étapes, entrée/sortie</li>
+</ul>
+</li>
+</ul>
+<h3 id="phases-dun-projet">Phases d'un projet<a class="headerlink" href="#phases-dun-projet" title="Permanent link">#</a></h3>
+<p>Tout projet est constitué de 6 phases distinctes</p>
+<ol>
+<li>Analyse et spécification (<em>initiating</em>)</li>
+<li>Conception (<em>planning</em>)</li>
+<li>Réalisation (<em>implementing</em>)</li>
+<li>Test (<em>monitoring</em>)</li>
+<li>Mise en production (<em>closure</em>)</li>
+<li>Maintenance (<em>adapting</em>)</li>
+</ol>
+<h3 id="phase-i-analyse-et-specification">Phase I : Analyse et spécification<a class="headerlink" href="#phase-i-analyse-et-specification" title="Permanent link">#</a></h3>
+<ul>
+<li>Description du dossier qualité</li>
+<li>Réalisation du cahier des charges fonctionnel</li>
+</ul>
+<h3 id="phase-ii-conception">Phase II : Conception<a class="headerlink" href="#phase-ii-conception" title="Permanent link">#</a></h3>
+<ul>
+<li>Définition de l'architecture du logiciel (globale)</li>
+<li>Découpage en modules (détaillée)</li>
+<li>Réalisation du cahier des charges technique</li>
+</ul>
+<h3 id="phase-iii-realisation">Phase III : Réalisation<a class="headerlink" href="#phase-iii-realisation" title="Permanent link">#</a></h3>
+<ul>
+<li>Développement logiciel</li>
+<li>Codage des modules</li>
+<li>Écriture des tests unitaires</li>
+</ul>
+<h3 id="phase-iv-tests">Phase IV : Tests<a class="headerlink" href="#phase-iv-tests" title="Permanent link">#</a></h3>
+<ul>
+<li>Tests</li>
+<li>Intégration</li>
+<li>Validation</li>
+<li>Qualification technique et fonctionnelle</li>
+</ul>
+<h3 id="phase-v-mise-en-production">Phase V : Mise en production<a class="headerlink" href="#phase-v-mise-en-production" title="Permanent link">#</a></h3>
+<ul>
+<li>Validation en environnement réel</li>
+<li>Correction des anomalies résiduelles</li>
+<li>Vérification du respect du contrat de service</li>
+</ul>
+<h3 id="phase-vi-maintenance-et-adaptation">Phase VI : Maintenance et adaptation<a class="headerlink" href="#phase-vi-maintenance-et-adaptation" title="Permanent link">#</a></h3>
+<ul>
+<li>Mini-cycles de projets incluant les 5 autres phases</li>
+</ul>
+<h3 id="effort-aux-differentes-phases">Effort aux différentes phases<a class="headerlink" href="#effort-aux-differentes-phases" title="Permanent link">#</a></h3>
+<p><img alt="120%" src="/images/02-effort-phases.png" /></p>
+<h3 id="un-peu-dhumour">Un peu d'humour<a class="headerlink" href="#un-peu-dhumour" title="Permanent link">#</a></h3>
+<p><img alt="Cycle et emotions" src="/images/02-cycle-v-emotions.png" /></p>
+<h2 id="differents-modeles-de-projets">Différents modèles de projets<a class="headerlink" href="#differents-modeles-de-projets" title="Permanent link">#</a></h2>
+<h3 id="selon-la-facon-davancer-sur-le-projet">Selon la façon d'avancer sur le projet<a class="headerlink" href="#selon-la-facon-davancer-sur-le-projet" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Modèles séquentiels</strong> (cascade, cycle en V)<ul>
+<li>Un seul trajet, une seule séquence</li>
+<li>Un seul gros livrable</li>
+</ul>
+</li>
+<li><strong>Modèles incrémentaux</strong> (prototypage, spirale)<ul>
+<li>Plusieurs étapes</li>
+<li>À chaque incrément, un produit partiel est livré</li>
+<li>On élargit le périmètre quand l'étape précédente est réussie</li>
+</ul>
+</li>
+<li><strong>Modèles itératifs</strong> (agile, scrum)<ul>
+<li>Plusieurs itérations des différentes phases</li>
+<li>À chaque itération un produit utilisable est livré</li>
+</ul>
+</li>
+</ul>
+<h3 id="modele-en-cascade-origines">Modèle en cascade : Origines<a class="headerlink" href="#modele-en-cascade-origines" title="Permanent link">#</a></h3>
+<ul>
+<li>Méthodologie séquentielle</li>
+<li>Modèle classique (Bohem 1988)<ul>
+<li>Base et référence des autres modèles</li>
+<li>Hérité de l'industrie du BTP</li>
+</ul>
+</li>
+</ul>
+<p><strong>Les conséquences d'une modification amont on un impact majeur sur les coûts en aval</strong></p>
+<h3 id="modele-en-cascade-caracteristiques">Modèle en cascade : Caractéristiques<a class="headerlink" href="#modele-en-cascade-caracteristiques" title="Permanent link">#</a></h3>
+<p>Chaque phase de ce modèle ont pour caractéristique :</p>
+<ul>
+<li>Est définie au préalable (développement modulaire)</li>
+<li>Doit être finie pour que la suivante commence</li>
+<li>Se termine...<ul>
+<li>... à date précise</li>
+<li>... seulement lorsque les livrables sont jugés satisfaisants</li>
+<li>... après une étape de validation-vérification</li>
+</ul>
+</li>
+</ul>
+<p><img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:" /> À l'origine, il n'y avait pas de retour arrière, mais après après
+évolution du modèle, une étape ne remet en cause que l'étape précédente</p>
+<h3 id="modele-en-cascade-illustration">Modèle en cascade : Illustration<a class="headerlink" href="#modele-en-cascade-illustration" title="Permanent link">#</a></h3>
+<p><img alt="Modèle en cascade" src="/images/02-cycle-cascade.png" /></p>
+<h2 id="differents-modeles-de-projets_1">Différents modèles de projets<a class="headerlink" href="#differents-modeles-de-projets_1" title="Permanent link">#</a></h2>
+<h3 id="cycle-en-v">Cycle en V<a class="headerlink" href="#cycle-en-v" title="Permanent link">#</a></h3>
+<h4 id="origine">Origine<a class="headerlink" href="#origine" title="Permanent link">#</a></h4>
+<ul>
+<li>Évolution du modèle en cascade (séquentiel)<ul>
+<li>Plus réactif que le modèle en cascade</li>
+<li>Limite le retour aux étapes précédentes</li>
+</ul>
+</li>
+<li>Met en évidence la nécessité d'anticiper <ul>
+<li>Dans les étapes descendantes on a les "attendus" des futures étapes montantes</li>
+</ul>
+</li>
+<li>Standard de l'industrie du développement logiciel et de la gestion de projet depuis les années 1980</li>
+</ul>
+<h4 id="illustration">Illustration<a class="headerlink" href="#illustration" title="Permanent link">#</a></h4>
+<p><img alt="Cycle en cascade" src="/images/02-cycle-v.png" /></p>
+<h4 id="avantages">Avantages<a class="headerlink" href="#avantages" title="Permanent link">#</a></h4>
+<ul>
+<li>Permet de discipliner le processus de développement</li>
+<li>Fait apparaitre des points de contrôle</li>
+<li>Notion de validation forte</li>
+<li>Base des cycles suivants</li>
+</ul>
+<h4 id="inconvenients">Inconvénients<a class="headerlink" href="#inconvenients" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Rigidité</strong> des phases linéaires<ul>
+<li>Industrie manufacturière &ne; créativité</li>
+</ul>
+</li>
+<li>Projet <strong>monolithique</strong> : un produit global livré en bloc<ul>
+<li>Effet « tunnel »</li>
+</ul>
+</li>
+<li><strong>Estimation du coût difficile</strong> àfaire</li>
+<li>Difficulté d'anticiper et d'intégrer les changements</li>
+</ul>
+<h3 id="prototypage">Prototypage<a class="headerlink" href="#prototypage" title="Permanent link">#</a></h3>
+<h4 id="origine_1">Origine<a class="headerlink" href="#origine_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Issu de la recherche (prototypage expérimental)</li>
+<li>Utilisé au niveau de la conception pour :<ul>
+<li>S'assurer de la faisabilité de parties critiques</li>
+<li>Valider des options de conception</li>
+</ul>
+</li>
+<li>Souvent jeté après développement</li>
+</ul>
+<h4 id="illustration_1">Illustration<a class="headerlink" href="#illustration_1" title="Permanent link">#</a></h4>
+<p><img alt="Prototypage expérimental" src="/images/02-proto-experimental.png" /></p>
+<h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h4>
+<ul>
+<li>Prototypage évolutif</li>
+<li>La première version du prototype: embryon<ul>
+<li>Développement par incrément</li>
+<li>Chaque prototype fait l'objet d'un cycle spécification-conception-implantation-test</li>
+</ul>
+</li>
+<li>Mise en place de la notion de cycle incrémental</li>
+</ul>
+<h3 id="spirale">Spirale<a class="headerlink" href="#spirale" title="Permanent link">#</a></h3>
+<h4 id="origine_2">Origine<a class="headerlink" href="#origine_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Basé sur le prototypage évolutif</li>
+<li>Basé sur la gestion des risques</li>
+<li>Reprends les étapes du cycle en V</li>
+<li>Démarche :<ul>
+<li>Identifier les risques et commencer par les plus importants</li>
+<li>Chaque cycle peut est basé sur une démarche en V ou en cascade</li>
+</ul>
+</li>
+</ul>
+<h4 id="avantages_1">Avantages<a class="headerlink" href="#avantages_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Meilleure maîtrise des risques</li>
+<li>Les utilisateurs acceptent progressivement le produit</li>
+<li>Meilleure réactivité</li>
+</ul>
+<h4 id="inconvenients_1">Inconvénients<a class="headerlink" href="#inconvenients_1" title="Permanent link">#</a></h4>
+<ul>
+<li>Le nombre d’incréments doit être assez important</li>
+<li>Fonctionne bien si le projet est géré en interne (quand $client = fournisseur$)</li>
+</ul>
+<h3 id="methodes-iteratives-agile-xp-etc">Méthodes itératives (agile, XP, etc.)<a class="headerlink" href="#methodes-iteratives-agile-xp-etc" title="Permanent link">#</a></h3>
+<ul>
+<li>Naissance : année 2000</li>
+<li>Modèle itératif</li>
+<li>Mise en avant du rôle du développeur</li>
+<li>Réduction de la documentation</li>
+<li>Renforcement du lien client/intégrateur</li>
+</ul>
+<h4 id="valeurs">Valeurs<a class="headerlink" href="#valeurs" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>La communication</strong>  <ul>
+<li>Client intégré dans le projet, groupe soudé</li>
+</ul>
+</li>
+<li><strong>Feedback (commentaire)</strong> <ul>
+<li>Travail en binôme, échanges directs et rapides avec le client</li>
+</ul>
+</li>
+<li><strong>La simplicité</strong> <ul>
+<li>Supprimer ce qui est inutile</li>
+</ul>
+</li>
+<li><strong>Le courage</strong> <ul>
+<li>Jeter le code mauvais, le client doit donner ses priorités</li>
+</ul>
+</li>
+</ul>
+<h4 id="fonctionnement">Fonctionnement<a class="headerlink" href="#fonctionnement" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Usage de "bonnes pratiques" de programmation</strong><ul>
+<li>Une conception simple, du refactoring, des tests unitaires, des tests fonctionnels</li>
+</ul>
+</li>
+<li><strong>Des acteurs différenciés</strong><ul>
+<li>Coach, manager, tracker, développeur, testeur, client</li>
+</ul>
+</li>
+<li><strong>Règles</strong><ul>
+<li>Programmation en binôme, responsabilité collective du code, intégration continue</li>
+</ul>
+</li>
+</ul>
+<h4 id="avantages_2">Avantages<a class="headerlink" href="#avantages_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Qualité<ul>
+<li>Maintenabilité,</li>
+<li>Efficacité</li>
+<li>Adaptabilité</li>
+</ul>
+</li>
+<li>Transparence<ul>
+<li>Client intégré</li>
+</ul>
+</li>
+<li>Respect des objectifs</li>
+<li>Ambiance de travail</li>
+</ul>
+<h4 id="inconvenients_2">Inconvénients<a class="headerlink" href="#inconvenients_2" title="Permanent link">#</a></h4>
+<ul>
+<li>Langages : adaptés pour des langages objets</li>
+<li>Projet de petits envergures</li>
+<li>Equipe réduite, et devant être très compétente et soudée</li>
+<li>Travail en binôme</li>
+<li>Clients omniprésents</li>
+</ul>
+<h4 id="variantes">Variantes<a class="headerlink" href="#variantes" title="Permanent link">#</a></h4>
+<ul>
+<li>La notion de besoin remplacé par la notion de service</li>
+<li>Découpage en Lots et en îlots</li>
+<li>Reprise des valeurs et de la méthodologie XP pour chacun de ces lots.</li>
+<li>Découpage du projet en îlots indépendants</li>
+</ul>
+<h4 id="lotissement">Lotissement<a class="headerlink" href="#lotissement" title="Permanent link">#</a></h4>
+<p><img alt="Projet agile lotissement" src="/images/02-agile-lotissement.png" /></p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">#</a></h2>
+<h3 id="la-necessite-dune-methode-de-gestion">La nécessité d'une méthode de gestion<a class="headerlink" href="#la-necessite-dune-methode-de-gestion" title="Permanent link">#</a></h3>
+<p>Il n'y a pas de bonnes ou de mauvaises méthodes</p>
+<p>Chaque projet a ses spécificités qui conduisent à définir  <strong>la méthode la plus
+adaptée</strong> (ou la moins mauvaise), qui résulte souvent du dosage subtil de
+plusieurs méthodes.</p>
+<h2 id="etapes-paralleles-externes-au-projet">Étapes parallèles / externes au projet<a class="headerlink" href="#etapes-paralleles-externes-au-projet" title="Permanent link">#</a></h2>
+<h3 id="le-transverse">Le transverse<a class="headerlink" href="#le-transverse" title="Permanent link">#</a></h3>
+<ul>
+<li>Gestion des environnements<ul>
+<li>Données de tests</li>
+<li>Administration des serveurs</li>
+<li>Mise en place du réseau informatique</li>
+<li>Installation/Masterisation du parc informatique</li>
+</ul>
+</li>
+<li>Le contrôle qualité</li>
+<li>Capacity planning<ul>
+<li>Suivi du système développé ou en cours de développement</li>
+</ul>
+</li>
+</ul>
+<h3 id="la-formation">La formation<a class="headerlink" href="#la-formation" title="Permanent link">#</a></h3>
+<ul>
+<li>Formation des futurs utilisateurs de l’application<ul>
+<li>Mise en place d’un environnement de formation</li>
+<li>Adaptation du projet par rapport aux premières remontés</li>
+</ul>
+</li>
+<li>Formation des futurs administrateurs de l’application</li>
+<li>Prise de connaissance de l’application</li>
+<li>Formation aux nouveaux outils pouvant être mis en place</li>
+<li>etc.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="../020-context-and-needs/" title="Contexte de l'exploitation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Contexte de l'exploitation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
